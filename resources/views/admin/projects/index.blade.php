@@ -9,6 +9,7 @@
                 <th scope="col">#</th>
                 <th scope="col">Titolo</th>
                 <th scope="col">Slug</th>
+                <th scope="col">Tipologia</th>
                 <th scope="col">
                     <a href="{{ route('admin.projects.create') }}" class="btn btn-success mt-4">
                         <i class="fa-solid fa-plus pe-2"></i>
@@ -23,6 +24,7 @@
                     <th scope="row">{{ $project->id }}</th>
                     <td>{{ $project->title }}</td>
                     <td>{{ $project->slug }}</td>
+                    <td>{{ $project->type?->name }}</td>
                     <td class="d-flex">
                         <a class="btn btn-primary" href="{{ route('admin.projects.show', $project->slug) }}">
                             <i class="fa-solid fa-circle-info"></i>
