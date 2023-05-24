@@ -16,7 +16,7 @@
 
         <li class="nav-item">
             <a href="{{ route('admin.types.index') }}"
-                class="nav-link {{ Route::currentRouteName() == 'admin.types.index' ? 'active' : '' }}">
+                class="nav-link {{ Route::currentRouteName() == 'admin.types.index' ? 'active' : '' }} {{ Route::currentRouteName() == 'admin.types.create' ? 'active' : '' }} {{ Route::currentRouteName() == 'admin.types.edit' ? 'active' : '' }}">
                 Types
             </a>
         </li>

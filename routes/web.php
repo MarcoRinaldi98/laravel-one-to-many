@@ -35,7 +35,7 @@ Route::middleware(['auth', 'verified'])
 
         Route::resource('types', TypeController::class)->parameters([
             'types' => 'type:slug'
-        ])->only(['index']); // except() per non creare le rotte selezioante, oppure only() per creare solo quelle selezionate
+        ])->except(['show']); // except() per non creare le rotte selezioante, oppure only() per creare solo quelle selezionate
     });
 
 Route::middleware('auth')->group(function () {

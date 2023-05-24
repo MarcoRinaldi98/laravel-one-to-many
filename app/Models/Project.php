@@ -13,7 +13,8 @@ class Project extends Model
     protected $fillable = [
         'title',
         'description',
-        'slug'
+        'slug',
+        'type_id'
     ];
 
     public static function generateSlug(string $title)

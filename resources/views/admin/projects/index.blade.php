@@ -19,7 +19,7 @@
             </tr>
         </thead>
         <tbody>
-            @foreach ($projects as $project)
+            @forelse ($projects as $project)
                 <tr>
                     <th scope="row">{{ $project->id }}</th>
                     <td>{{ $project->title }}</td>
@@ -47,7 +47,9 @@
                         </form>
                     </td>
                 </tr>
-            @endforeach
+            @empty
+                <p class="text-center fs-3 fw-bold">Nessun proggetto presente</p>
+            @endforelse
         </tbody>
     </table>
 @endsection
